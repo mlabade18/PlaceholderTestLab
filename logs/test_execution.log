@@ -1,0 +1,334 @@
+2026-04-22 19:57:39,358 - PlaceholderTestLab - INFO - API Call: get - Args: ('/users',) Kwargs: {}
+2026-04-22 19:57:39,740 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.38s
+2026-04-22 19:57:39,743 - PlaceholderTestLab - INFO - API Call: get - Args: ('/users',) Kwargs: {}
+2026-04-22 19:57:39,834 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.09s
+2026-04-22 19:57:39,847 - PlaceholderTestLab - INFO - Database initialized successfully
+2026-04-22 19:57:39,847 - PlaceholderTestLab - INFO - API Call: get - Args: ('/users',) Kwargs: {}
+2026-04-22 19:57:39,935 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.09s
+2026-04-22 19:57:39,936 - PlaceholderTestLab - INFO - Inserted 10 users into database
+2026-04-22 19:57:40,035 - PlaceholderTestLab - INFO - API Call: get - Args: ('/users/1',) Kwargs: {}
+2026-04-22 19:57:40,114 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.08s
+2026-04-22 19:57:40,121 - PlaceholderTestLab - INFO - API Call: get - Args: ('/users/2',) Kwargs: {}
+2026-04-22 19:57:40,208 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.09s
+2026-04-22 19:57:40,217 - PlaceholderTestLab - INFO - API Call: get - Args: ('/users/3',) Kwargs: {}
+2026-04-22 19:57:40,316 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.10s
+2026-04-22 19:57:40,323 - PlaceholderTestLab - INFO - API Call: get - Args: ('/users/5',) Kwargs: {}
+2026-04-22 19:57:40,430 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.11s
+2026-04-22 19:57:40,440 - PlaceholderTestLab - INFO - API Call: get - Args: ('/users/10',) Kwargs: {}
+2026-04-22 19:57:41,246 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.81s
+2026-04-22 19:57:41,253 - PlaceholderTestLab - INFO - API Call: get - Args: ('/users/9999',) Kwargs: {}
+2026-04-22 19:57:41,351 - PlaceholderTestLab - INFO - API Response: get - Status: 404 - Time: 0.10s
+2026-04-22 19:57:41,363 - PlaceholderTestLab - INFO - API Call: get - Args: ('/users/abc',) Kwargs: {}
+2026-04-22 19:57:42,139 - PlaceholderTestLab - INFO - API Response: get - Status: 404 - Time: 0.77s
+2026-04-22 22:48:52,826 - PlaceholderTestLab - INFO - API Call: get - Args: ('/albums',) Kwargs: {}
+2026-04-22 22:48:53,410 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.58s
+2026-04-22 22:48:53,425 - PlaceholderTestLab - INFO - Database initialized successfully
+2026-04-22 22:48:53,426 - PlaceholderTestLab - INFO - API Call: get - Args: ('/users',) Kwargs: {}
+2026-04-22 22:48:53,717 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.29s
+2026-04-22 22:48:53,721 - PlaceholderTestLab - INFO - Inserted 10 users into database
+2026-04-22 22:48:53,722 - PlaceholderTestLab - INFO - API Call: get - Args: ('/albums',) Kwargs: {}
+2026-04-22 22:48:53,857 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.13s
+2026-04-22 22:48:53,859 - PlaceholderTestLab - INFO - Inserted 100 albums into database
+2026-04-22 22:48:54,003 - PlaceholderTestLab - INFO - API Call: get - Args: ('/albums',) Kwargs: {'params': {'userId': 1}}
+2026-04-22 22:48:54,175 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.17s
+2026-04-22 22:48:54,182 - PlaceholderTestLab - INFO - API Call: get - Args: ('/albums',) Kwargs: {'params': {'userId': 5}}
+2026-04-22 22:48:55,025 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.84s
+2026-04-22 22:48:55,036 - PlaceholderTestLab - INFO - API Call: get - Args: ('/albums',) Kwargs: {'params': {'userId': 10}}
+2026-04-22 22:48:55,853 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.82s
+2026-04-22 22:48:55,869 - PlaceholderTestLab - INFO - API Call: get - Args: ('/comments',) Kwargs: {}
+2026-04-22 22:48:56,330 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.46s
+2026-04-22 22:48:56,341 - PlaceholderTestLab - INFO - API Call: get - Args: ('/posts',) Kwargs: {}
+2026-04-22 22:48:56,743 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.40s
+2026-04-22 22:48:56,745 - PlaceholderTestLab - INFO - Inserted 100 posts into database
+2026-04-22 22:48:56,747 - PlaceholderTestLab - INFO - API Call: get - Args: ('/comments',) Kwargs: {}
+2026-04-22 22:48:56,928 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.18s
+2026-04-22 22:48:56,935 - PlaceholderTestLab - INFO - Inserted 500 comments into database
+2026-04-22 22:48:57,722 - PlaceholderTestLab - INFO - API Call: get - Args: ('/comments',) Kwargs: {'params': {'postId': 1}}
+2026-04-22 22:48:57,878 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.16s
+2026-04-22 22:48:57,887 - PlaceholderTestLab - INFO - API Call: get - Args: ('/comments',) Kwargs: {'params': {'postId': 10}}
+2026-04-22 22:48:58,748 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.86s
+2026-04-22 22:48:58,762 - PlaceholderTestLab - INFO - API Call: get - Args: ('/comments',) Kwargs: {'params': {'postId': 50}}
+2026-04-22 22:48:59,667 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.90s
+2026-04-22 22:48:59,717 - PlaceholderTestLab - INFO - API Call: get - Args: ('/todos',) Kwargs: {}
+2026-04-22 22:49:00,014 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.30s
+2026-04-22 22:49:00,017 - PlaceholderTestLab - INFO - Inserted 200 todos into database
+2026-04-22 22:49:00,049 - PlaceholderTestLab - INFO - API Call: get - Args: ('/posts',) Kwargs: {}
+2026-04-22 22:49:00,249 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.20s
+2026-04-22 22:49:00,427 - PlaceholderTestLab - INFO - API Call: get - Args: ('/posts/1',) Kwargs: {}
+2026-04-22 22:49:00,999 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.57s
+2026-04-22 22:49:01,018 - PlaceholderTestLab - INFO - API Call: get - Args: ('/posts/50',) Kwargs: {}
+2026-04-22 22:49:01,489 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.47s
+2026-04-22 22:49:01,504 - PlaceholderTestLab - INFO - API Call: get - Args: ('/posts/100',) Kwargs: {}
+2026-04-22 22:49:01,604 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.10s
+2026-04-22 22:49:01,629 - PlaceholderTestLab - INFO - API Call: get - Args: ('/posts',) Kwargs: {'params': {'userId': 1}}
+2026-04-22 22:49:01,729 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.10s
+2026-04-22 22:49:01,741 - PlaceholderTestLab - INFO - API Call: get - Args: ('/posts',) Kwargs: {'params': {'userId': 2}}
+2026-04-22 22:49:01,869 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.13s
+2026-04-22 22:49:01,880 - PlaceholderTestLab - INFO - API Call: get - Args: ('/posts',) Kwargs: {'params': {'userId': 3}}
+2026-04-22 22:49:02,644 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.76s
+2026-04-22 22:49:02,667 - PlaceholderTestLab - INFO - API Call: get - Args: ('/todos',) Kwargs: {}
+2026-04-22 22:49:02,792 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.12s
+2026-04-22 22:49:03,110 - PlaceholderTestLab - INFO - API Call: get - Args: ('/todos',) Kwargs: {'params': {'userId': 1}}
+2026-04-22 22:49:04,075 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.96s
+2026-04-22 22:49:04,086 - PlaceholderTestLab - INFO - API Call: get - Args: ('/todos',) Kwargs: {'params': {'userId': 5}}
+2026-04-22 22:49:04,893 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.81s
+2026-04-22 22:49:04,904 - PlaceholderTestLab - INFO - API Call: get - Args: ('/todos',) Kwargs: {'params': {'userId': 10}}
+2026-04-22 22:49:05,713 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.81s
+2026-04-22 22:49:05,743 - PlaceholderTestLab - INFO - API Call: get - Args: ('/users',) Kwargs: {}
+2026-04-22 22:49:05,849 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.11s
+2026-04-22 22:49:05,859 - PlaceholderTestLab - INFO - API Call: get - Args: ('/users',) Kwargs: {}
+2026-04-22 22:49:05,963 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.10s
+2026-04-22 22:49:06,077 - PlaceholderTestLab - INFO - API Call: get - Args: ('/users/1',) Kwargs: {}
+2026-04-22 22:49:06,187 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.11s
+2026-04-22 22:49:06,195 - PlaceholderTestLab - INFO - API Call: get - Args: ('/users/2',) Kwargs: {}
+2026-04-22 22:49:06,301 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.11s
+2026-04-22 22:49:06,312 - PlaceholderTestLab - INFO - API Call: get - Args: ('/users/3',) Kwargs: {}
+2026-04-22 22:49:06,417 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.10s
+2026-04-22 22:49:06,436 - PlaceholderTestLab - INFO - API Call: get - Args: ('/users/5',) Kwargs: {}
+2026-04-22 22:49:06,539 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.10s
+2026-04-22 22:49:06,554 - PlaceholderTestLab - INFO - API Call: get - Args: ('/users/10',) Kwargs: {}
+2026-04-22 22:49:06,666 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.11s
+2026-04-22 22:49:06,678 - PlaceholderTestLab - INFO - API Call: get - Args: ('/users/9999',) Kwargs: {}
+2026-04-22 22:49:07,447 - PlaceholderTestLab - INFO - API Response: get - Status: 404 - Time: 0.77s
+2026-04-22 22:49:07,460 - PlaceholderTestLab - INFO - API Call: get - Args: ('/users/abc',) Kwargs: {}
+2026-04-22 22:49:07,574 - PlaceholderTestLab - INFO - API Response: get - Status: 404 - Time: 0.11s
+2026-05-04 11:34:31,832 - PlaceholderTestLab - INFO - API Call: get - Args: ('/albums',) Kwargs: {}
+2026-05-04 11:34:32,051 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.22s
+2026-05-04 11:34:32,145 - PlaceholderTestLab - INFO - API Call: get - Args: ('/albums',) Kwargs: {'params': {'userId': 1}}
+2026-05-04 11:34:32,924 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.78s
+2026-05-04 11:34:32,932 - PlaceholderTestLab - INFO - API Call: get - Args: ('/albums',) Kwargs: {'params': {'userId': 5}}
+2026-05-04 11:34:33,739 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.81s
+2026-05-04 11:34:33,748 - PlaceholderTestLab - INFO - API Call: get - Args: ('/albums',) Kwargs: {'params': {'userId': 10}}
+2026-05-04 11:34:34,461 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.71s
+2026-05-04 11:34:34,477 - PlaceholderTestLab - INFO - API Call: get - Args: ('/comments',) Kwargs: {}
+2026-05-04 11:34:34,583 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.11s
+2026-05-04 11:34:34,668 - PlaceholderTestLab - INFO - API Call: get - Args: ('/comments',) Kwargs: {'params': {'postId': 1}}
+2026-05-04 11:34:35,687 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 1.02s
+2026-05-04 11:34:35,693 - PlaceholderTestLab - INFO - API Call: get - Args: ('/comments',) Kwargs: {'params': {'postId': 10}}
+2026-05-04 11:34:36,509 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.82s
+2026-05-04 11:34:36,519 - PlaceholderTestLab - INFO - API Call: get - Args: ('/comments',) Kwargs: {'params': {'postId': 50}}
+2026-05-04 11:34:37,330 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.81s
+2026-05-04 11:34:37,463 - PlaceholderTestLab - INFO - API Call: get - Args: ('/posts',) Kwargs: {}
+2026-05-04 11:34:37,548 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.09s
+2026-05-04 11:34:37,591 - PlaceholderTestLab - INFO - API Call: get - Args: ('/posts/1',) Kwargs: {}
+2026-05-04 11:34:37,618 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.03s
+2026-05-04 11:34:37,623 - PlaceholderTestLab - INFO - API Call: get - Args: ('/posts/50',) Kwargs: {}
+2026-05-04 11:34:37,657 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.03s
+2026-05-04 11:34:37,665 - PlaceholderTestLab - INFO - API Call: get - Args: ('/posts/100',) Kwargs: {}
+2026-05-04 11:34:37,692 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.03s
+2026-05-04 11:34:37,723 - PlaceholderTestLab - INFO - API Call: get - Args: ('/posts',) Kwargs: {'params': {'userId': 1}}
+2026-05-04 11:34:37,755 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.03s
+2026-05-04 11:34:37,763 - PlaceholderTestLab - INFO - API Call: get - Args: ('/posts',) Kwargs: {'params': {'userId': 2}}
+2026-05-04 11:34:38,464 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.70s
+2026-05-04 11:34:38,472 - PlaceholderTestLab - INFO - API Call: get - Args: ('/posts',) Kwargs: {'params': {'userId': 3}}
+2026-05-04 11:34:39,157 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.68s
+2026-05-04 11:34:39,192 - PlaceholderTestLab - INFO - API Call: get - Args: ('/todos',) Kwargs: {}
+2026-05-04 11:34:39,288 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.10s
+2026-05-04 11:34:39,365 - PlaceholderTestLab - INFO - API Call: get - Args: ('/todos',) Kwargs: {'params': {'userId': 1}}
+2026-05-04 11:34:40,197 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.83s
+2026-05-04 11:34:40,208 - PlaceholderTestLab - INFO - API Call: get - Args: ('/todos',) Kwargs: {'params': {'userId': 5}}
+2026-05-04 11:34:41,054 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.84s
+2026-05-04 11:34:41,063 - PlaceholderTestLab - INFO - API Call: get - Args: ('/todos',) Kwargs: {'params': {'userId': 10}}
+2026-05-04 11:34:41,782 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.72s
+2026-05-04 11:34:41,837 - PlaceholderTestLab - INFO - API Call: get - Args: ('/users',) Kwargs: {}
+2026-05-04 11:34:41,935 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.10s
+2026-05-04 11:34:41,944 - PlaceholderTestLab - INFO - API Call: get - Args: ('/users',) Kwargs: {}
+2026-05-04 11:34:41,981 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.04s
+2026-05-04 11:34:42,058 - PlaceholderTestLab - INFO - API Call: get - Args: ('/users/1',) Kwargs: {}
+2026-05-04 11:34:42,088 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.03s
+2026-05-04 11:34:42,096 - PlaceholderTestLab - INFO - API Call: get - Args: ('/users/2',) Kwargs: {}
+2026-05-04 11:34:42,127 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.03s
+2026-05-04 11:34:42,134 - PlaceholderTestLab - INFO - API Call: get - Args: ('/users/3',) Kwargs: {}
+2026-05-04 11:34:42,163 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.03s
+2026-05-04 11:34:42,170 - PlaceholderTestLab - INFO - API Call: get - Args: ('/users/5',) Kwargs: {}
+2026-05-04 11:34:42,863 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.69s
+2026-05-04 11:34:42,879 - PlaceholderTestLab - INFO - API Call: get - Args: ('/users/10',) Kwargs: {}
+2026-05-04 11:34:42,916 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.04s
+2026-05-04 11:34:42,926 - PlaceholderTestLab - INFO - API Call: get - Args: ('/users/9999',) Kwargs: {}
+2026-05-04 11:34:43,670 - PlaceholderTestLab - INFO - API Response: get - Status: 404 - Time: 0.74s
+2026-05-04 11:34:43,681 - PlaceholderTestLab - INFO - API Call: get - Args: ('/users/abc',) Kwargs: {}
+2026-05-04 11:34:44,394 - PlaceholderTestLab - INFO - API Response: get - Status: 404 - Time: 0.71s
+2026-05-04 11:34:50,612 - PlaceholderTestLab - INFO - API Call: get - Args: ('/albums',) Kwargs: {}
+2026-05-04 11:34:51,463 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.85s
+2026-05-04 11:34:51,559 - PlaceholderTestLab - INFO - API Call: get - Args: ('/albums',) Kwargs: {'params': {'userId': 1}}
+2026-05-04 11:34:52,230 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.67s
+2026-05-04 11:34:52,238 - PlaceholderTestLab - INFO - API Call: get - Args: ('/albums',) Kwargs: {'params': {'userId': 5}}
+2026-05-04 11:34:52,996 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.76s
+2026-05-04 11:34:53,008 - PlaceholderTestLab - INFO - API Call: get - Args: ('/albums',) Kwargs: {'params': {'userId': 10}}
+2026-05-04 11:34:53,919 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.91s
+2026-05-04 11:34:53,931 - PlaceholderTestLab - INFO - API Call: get - Args: ('/comments',) Kwargs: {}
+2026-05-04 11:34:54,036 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.11s
+2026-05-04 11:34:54,123 - PlaceholderTestLab - INFO - API Call: get - Args: ('/comments',) Kwargs: {'params': {'postId': 1}}
+2026-05-04 11:34:54,152 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.03s
+2026-05-04 11:34:54,159 - PlaceholderTestLab - INFO - API Call: get - Args: ('/comments',) Kwargs: {'params': {'postId': 10}}
+2026-05-04 11:34:54,896 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.74s
+2026-05-04 11:34:54,910 - PlaceholderTestLab - INFO - API Call: get - Args: ('/comments',) Kwargs: {'params': {'postId': 50}}
+2026-05-04 11:34:55,659 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.75s
+2026-05-04 11:34:55,799 - PlaceholderTestLab - INFO - API Call: get - Args: ('/posts',) Kwargs: {}
+2026-05-04 11:34:55,905 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.11s
+2026-05-04 11:34:55,963 - PlaceholderTestLab - INFO - API Call: get - Args: ('/posts/1',) Kwargs: {}
+2026-05-04 11:34:55,993 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.03s
+2026-05-04 11:34:56,002 - PlaceholderTestLab - INFO - API Call: get - Args: ('/posts/50',) Kwargs: {}
+2026-05-04 11:34:56,788 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.79s
+2026-05-04 11:34:56,801 - PlaceholderTestLab - INFO - API Call: get - Args: ('/posts/100',) Kwargs: {}
+2026-05-04 11:34:57,495 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.69s
+2026-05-04 11:34:57,550 - PlaceholderTestLab - INFO - API Call: get - Args: ('/posts',) Kwargs: {'params': {'userId': 1}}
+2026-05-04 11:34:57,582 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.03s
+2026-05-04 11:34:57,590 - PlaceholderTestLab - INFO - API Call: get - Args: ('/posts',) Kwargs: {'params': {'userId': 2}}
+2026-05-04 11:34:58,320 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.73s
+2026-05-04 11:34:58,330 - PlaceholderTestLab - INFO - API Call: get - Args: ('/posts',) Kwargs: {'params': {'userId': 3}}
+2026-05-04 11:34:59,037 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.71s
+2026-05-04 11:34:59,070 - PlaceholderTestLab - INFO - API Call: get - Args: ('/todos',) Kwargs: {}
+2026-05-04 11:34:59,160 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.09s
+2026-05-04 11:34:59,229 - PlaceholderTestLab - INFO - API Call: get - Args: ('/todos',) Kwargs: {'params': {'userId': 1}}
+2026-05-04 11:35:00,033 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.80s
+2026-05-04 11:35:00,047 - PlaceholderTestLab - INFO - API Call: get - Args: ('/todos',) Kwargs: {'params': {'userId': 5}}
+2026-05-04 11:35:00,778 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.73s
+2026-05-04 11:35:00,789 - PlaceholderTestLab - INFO - API Call: get - Args: ('/todos',) Kwargs: {'params': {'userId': 10}}
+2026-05-04 11:35:01,523 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.73s
+2026-05-04 11:35:01,586 - PlaceholderTestLab - INFO - API Call: get - Args: ('/users',) Kwargs: {}
+2026-05-04 11:35:01,700 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.11s
+2026-05-04 11:35:01,707 - PlaceholderTestLab - INFO - API Call: get - Args: ('/users',) Kwargs: {}
+2026-05-04 11:35:01,738 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.03s
+2026-05-04 11:35:01,832 - PlaceholderTestLab - INFO - API Call: get - Args: ('/users/1',) Kwargs: {}
+2026-05-04 11:35:01,863 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.03s
+2026-05-04 11:35:01,870 - PlaceholderTestLab - INFO - API Call: get - Args: ('/users/2',) Kwargs: {}
+2026-05-04 11:35:01,905 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.03s
+2026-05-04 11:35:01,913 - PlaceholderTestLab - INFO - API Call: get - Args: ('/users/3',) Kwargs: {}
+2026-05-04 11:35:02,671 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.76s
+2026-05-04 11:35:02,687 - PlaceholderTestLab - INFO - API Call: get - Args: ('/users/5',) Kwargs: {}
+2026-05-04 11:35:02,732 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.05s
+2026-05-04 11:35:02,741 - PlaceholderTestLab - INFO - API Call: get - Args: ('/users/10',) Kwargs: {}
+2026-05-04 11:35:03,430 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.69s
+2026-05-04 11:35:03,442 - PlaceholderTestLab - INFO - API Call: get - Args: ('/users/9999',) Kwargs: {}
+2026-05-04 11:35:04,259 - PlaceholderTestLab - INFO - API Response: get - Status: 404 - Time: 0.82s
+2026-05-04 11:35:04,272 - PlaceholderTestLab - INFO - API Call: get - Args: ('/users/abc',) Kwargs: {}
+2026-05-04 11:35:05,078 - PlaceholderTestLab - INFO - API Response: get - Status: 404 - Time: 0.81s
+2026-05-04 11:37:39,940 - PlaceholderTestLab - INFO - API Call: get - Args: ('/albums',) Kwargs: {}
+2026-05-04 11:37:40,048 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.11s
+2026-05-04 11:37:40,133 - PlaceholderTestLab - INFO - API Call: get - Args: ('/albums',) Kwargs: {'params': {'userId': 1}}
+2026-05-04 11:37:40,830 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.70s
+2026-05-04 11:37:40,841 - PlaceholderTestLab - INFO - API Call: get - Args: ('/albums',) Kwargs: {'params': {'userId': 5}}
+2026-05-04 11:37:41,641 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.80s
+2026-05-04 11:37:41,653 - PlaceholderTestLab - INFO - API Call: get - Args: ('/albums',) Kwargs: {'params': {'userId': 10}}
+2026-05-04 11:37:42,347 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.69s
+2026-05-04 11:37:42,359 - PlaceholderTestLab - INFO - API Call: get - Args: ('/comments',) Kwargs: {}
+2026-05-04 11:37:42,461 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.10s
+2026-05-04 11:37:42,551 - PlaceholderTestLab - INFO - API Call: get - Args: ('/comments',) Kwargs: {'params': {'postId': 1}}
+2026-05-04 11:37:42,583 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.03s
+2026-05-04 11:37:42,589 - PlaceholderTestLab - INFO - API Call: get - Args: ('/comments',) Kwargs: {'params': {'postId': 10}}
+2026-05-04 11:37:43,388 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.80s
+2026-05-04 11:37:43,400 - PlaceholderTestLab - INFO - API Call: get - Args: ('/comments',) Kwargs: {'params': {'postId': 50}}
+2026-05-04 11:37:44,210 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.81s
+2026-05-04 11:37:44,317 - PlaceholderTestLab - INFO - API Call: get - Args: ('/posts',) Kwargs: {}
+2026-05-04 11:37:44,400 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.08s
+2026-05-04 11:37:44,440 - PlaceholderTestLab - INFO - API Call: get - Args: ('/posts/1',) Kwargs: {}
+2026-05-04 11:37:44,467 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.03s
+2026-05-04 11:37:44,475 - PlaceholderTestLab - INFO - API Call: get - Args: ('/posts/50',) Kwargs: {}
+2026-05-04 11:37:44,504 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.03s
+2026-05-04 11:37:44,512 - PlaceholderTestLab - INFO - API Call: get - Args: ('/posts/100',) Kwargs: {}
+2026-05-04 11:37:44,540 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.03s
+2026-05-04 11:37:44,576 - PlaceholderTestLab - INFO - API Call: get - Args: ('/posts',) Kwargs: {'params': {'userId': 1}}
+2026-05-04 11:37:44,607 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.03s
+2026-05-04 11:37:44,615 - PlaceholderTestLab - INFO - API Call: get - Args: ('/posts',) Kwargs: {'params': {'userId': 2}}
+2026-05-04 11:37:44,644 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.03s
+2026-05-04 11:37:44,651 - PlaceholderTestLab - INFO - API Call: get - Args: ('/posts',) Kwargs: {'params': {'userId': 3}}
+2026-05-04 11:37:44,681 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.03s
+2026-05-04 11:37:44,709 - PlaceholderTestLab - INFO - API Call: get - Args: ('/todos',) Kwargs: {}
+2026-05-04 11:37:44,799 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.09s
+2026-05-04 11:37:44,873 - PlaceholderTestLab - INFO - API Call: get - Args: ('/todos',) Kwargs: {'params': {'userId': 1}}
+2026-05-04 11:37:45,644 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.77s
+2026-05-04 11:37:45,658 - PlaceholderTestLab - INFO - API Call: get - Args: ('/todos',) Kwargs: {'params': {'userId': 5}}
+2026-05-04 11:37:46,464 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.81s
+2026-05-04 11:37:46,480 - PlaceholderTestLab - INFO - API Call: get - Args: ('/todos',) Kwargs: {'params': {'userId': 10}}
+2026-05-04 11:37:47,188 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.71s
+2026-05-04 11:37:47,253 - PlaceholderTestLab - INFO - API Call: get - Args: ('/users',) Kwargs: {}
+2026-05-04 11:37:47,339 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.09s
+2026-05-04 11:37:47,348 - PlaceholderTestLab - INFO - API Call: get - Args: ('/users',) Kwargs: {}
+2026-05-04 11:37:47,377 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.03s
+2026-05-04 11:37:47,471 - PlaceholderTestLab - INFO - API Call: get - Args: ('/users/1',) Kwargs: {}
+2026-05-04 11:37:47,503 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.03s
+2026-05-04 11:37:47,511 - PlaceholderTestLab - INFO - API Call: get - Args: ('/users/2',) Kwargs: {}
+2026-05-04 11:37:47,540 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.03s
+2026-05-04 11:37:47,548 - PlaceholderTestLab - INFO - API Call: get - Args: ('/users/3',) Kwargs: {}
+2026-05-04 11:37:47,578 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.03s
+2026-05-04 11:37:47,586 - PlaceholderTestLab - INFO - API Call: get - Args: ('/users/5',) Kwargs: {}
+2026-05-04 11:37:47,617 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.03s
+2026-05-04 11:37:47,625 - PlaceholderTestLab - INFO - API Call: get - Args: ('/users/10',) Kwargs: {}
+2026-05-04 11:37:47,656 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.03s
+2026-05-04 11:37:47,666 - PlaceholderTestLab - INFO - API Call: get - Args: ('/users/9999',) Kwargs: {}
+2026-05-04 11:37:47,697 - PlaceholderTestLab - INFO - API Response: get - Status: 404 - Time: 0.03s
+2026-05-04 11:37:47,707 - PlaceholderTestLab - INFO - API Call: get - Args: ('/users/abc',) Kwargs: {}
+2026-05-04 11:37:47,739 - PlaceholderTestLab - INFO - API Response: get - Status: 404 - Time: 0.03s
+2026-05-04 11:39:22,249 - PlaceholderTestLab - INFO - API Call: get - Args: ('/albums',) Kwargs: {}
+2026-05-04 11:39:22,382 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.13s
+2026-05-04 11:39:22,392 - PlaceholderTestLab - INFO - Database initialized successfully
+2026-05-04 11:39:22,393 - PlaceholderTestLab - INFO - API Call: get - Args: ('/users',) Kwargs: {}
+2026-05-04 11:39:22,479 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.09s
+2026-05-04 11:39:22,481 - PlaceholderTestLab - INFO - Inserted 10 users into database
+2026-05-04 11:39:22,481 - PlaceholderTestLab - INFO - API Call: get - Args: ('/albums',) Kwargs: {}
+2026-05-04 11:39:22,509 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.03s
+2026-05-04 11:39:22,510 - PlaceholderTestLab - INFO - Inserted 100 albums into database
+2026-05-04 11:39:22,650 - PlaceholderTestLab - INFO - API Call: get - Args: ('/albums',) Kwargs: {'params': {'userId': 1}}
+2026-05-04 11:39:22,681 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.03s
+2026-05-04 11:39:22,689 - PlaceholderTestLab - INFO - API Call: get - Args: ('/albums',) Kwargs: {'params': {'userId': 5}}
+2026-05-04 11:39:22,719 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.03s
+2026-05-04 11:39:22,728 - PlaceholderTestLab - INFO - API Call: get - Args: ('/albums',) Kwargs: {'params': {'userId': 10}}
+2026-05-04 11:39:22,756 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.03s
+2026-05-04 11:39:22,766 - PlaceholderTestLab - INFO - API Call: get - Args: ('/comments',) Kwargs: {}
+2026-05-04 11:39:22,861 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.09s
+2026-05-04 11:39:22,868 - PlaceholderTestLab - INFO - API Call: get - Args: ('/posts',) Kwargs: {}
+2026-05-04 11:39:22,961 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.09s
+2026-05-04 11:39:22,962 - PlaceholderTestLab - INFO - Inserted 100 posts into database
+2026-05-04 11:39:22,963 - PlaceholderTestLab - INFO - API Call: get - Args: ('/comments',) Kwargs: {}
+2026-05-04 11:39:22,997 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.03s
+2026-05-04 11:39:23,001 - PlaceholderTestLab - INFO - Inserted 500 comments into database
+2026-05-04 11:39:23,842 - PlaceholderTestLab - INFO - API Call: get - Args: ('/comments',) Kwargs: {'params': {'postId': 1}}
+2026-05-04 11:39:23,874 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.03s
+2026-05-04 11:39:23,882 - PlaceholderTestLab - INFO - API Call: get - Args: ('/comments',) Kwargs: {'params': {'postId': 10}}
+2026-05-04 11:39:24,613 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.73s
+2026-05-04 11:39:24,624 - PlaceholderTestLab - INFO - API Call: get - Args: ('/comments',) Kwargs: {'params': {'postId': 50}}
+2026-05-04 11:39:25,401 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.78s
+2026-05-04 11:39:25,456 - PlaceholderTestLab - INFO - API Call: get - Args: ('/todos',) Kwargs: {}
+2026-05-04 11:39:25,545 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.09s
+2026-05-04 11:39:25,547 - PlaceholderTestLab - INFO - Inserted 200 todos into database
+2026-05-04 11:39:25,575 - PlaceholderTestLab - INFO - API Call: get - Args: ('/posts',) Kwargs: {}
+2026-05-04 11:39:25,606 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.03s
+2026-05-04 11:39:25,774 - PlaceholderTestLab - INFO - API Call: get - Args: ('/posts/1',) Kwargs: {}
+2026-05-04 11:39:25,801 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.03s
+2026-05-04 11:39:25,809 - PlaceholderTestLab - INFO - API Call: get - Args: ('/posts/50',) Kwargs: {}
+2026-05-04 11:39:26,545 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.74s
+2026-05-04 11:39:26,556 - PlaceholderTestLab - INFO - API Call: get - Args: ('/posts/100',) Kwargs: {}
+2026-05-04 11:39:27,262 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.70s
+2026-05-04 11:39:27,289 - PlaceholderTestLab - INFO - API Call: get - Args: ('/posts',) Kwargs: {'params': {'userId': 1}}
+2026-05-04 11:39:27,323 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.03s
+2026-05-04 11:39:27,332 - PlaceholderTestLab - INFO - API Call: get - Args: ('/posts',) Kwargs: {'params': {'userId': 2}}
+2026-05-04 11:39:28,146 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.81s
+2026-05-04 11:39:28,159 - PlaceholderTestLab - INFO - API Call: get - Args: ('/posts',) Kwargs: {'params': {'userId': 3}}
+2026-05-04 11:39:28,906 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.75s
+2026-05-04 11:39:28,932 - PlaceholderTestLab - INFO - API Call: get - Args: ('/todos',) Kwargs: {}
+2026-05-04 11:39:28,967 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.03s
+2026-05-04 11:39:29,274 - PlaceholderTestLab - INFO - API Call: get - Args: ('/todos',) Kwargs: {'params': {'userId': 1}}
+2026-05-04 11:39:29,991 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.72s
+2026-05-04 11:39:30,002 - PlaceholderTestLab - INFO - API Call: get - Args: ('/todos',) Kwargs: {'params': {'userId': 5}}
+2026-05-04 11:39:30,755 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.75s
+2026-05-04 11:39:30,765 - PlaceholderTestLab - INFO - API Call: get - Args: ('/todos',) Kwargs: {'params': {'userId': 10}}
+2026-05-04 11:39:31,527 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.76s
+2026-05-04 11:39:31,555 - PlaceholderTestLab - INFO - API Call: get - Args: ('/users',) Kwargs: {}
+2026-05-04 11:39:31,759 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.20s
+2026-05-04 11:39:31,769 - PlaceholderTestLab - INFO - API Call: get - Args: ('/users',) Kwargs: {}
+2026-05-04 11:39:31,802 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.03s
+2026-05-04 11:39:31,911 - PlaceholderTestLab - INFO - API Call: get - Args: ('/users/1',) Kwargs: {}
+2026-05-04 11:39:31,941 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.03s
+2026-05-04 11:39:31,949 - PlaceholderTestLab - INFO - API Call: get - Args: ('/users/2',) Kwargs: {}
+2026-05-04 11:39:31,979 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.03s
+2026-05-04 11:39:31,987 - PlaceholderTestLab - INFO - API Call: get - Args: ('/users/3',) Kwargs: {}
+2026-05-04 11:39:32,018 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.03s
+2026-05-04 11:39:32,026 - PlaceholderTestLab - INFO - API Call: get - Args: ('/users/5',) Kwargs: {}
+2026-05-04 11:39:32,777 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.75s
+2026-05-04 11:39:32,788 - PlaceholderTestLab - INFO - API Call: get - Args: ('/users/10',) Kwargs: {}
+2026-05-04 11:39:33,518 - PlaceholderTestLab - INFO - API Response: get - Status: 200 - Time: 0.73s
+2026-05-04 11:39:33,530 - PlaceholderTestLab - INFO - API Call: get - Args: ('/users/9999',) Kwargs: {}
+2026-05-04 11:39:34,288 - PlaceholderTestLab - INFO - API Response: get - Status: 404 - Time: 0.76s
+2026-05-04 11:39:34,299 - PlaceholderTestLab - INFO - API Call: get - Args: ('/users/abc',) Kwargs: {}
+2026-05-04 11:39:34,992 - PlaceholderTestLab - INFO - API Response: get - Status: 404 - Time: 0.69s

@@ -1,0 +1,12 @@
+pytest==7.4.3
+pytest-html==4.1.1
+pytest-metadata==3.1.1
+pytest-xdist==3.5.0
+pytest-cov==4.1.0
+pytest-allure==2.13.2
+requests==2.31.0
+python-dotenv==1.0.0
+pylint==3.0.0
+flake8==6.1.0
+psycopg2-binary==2.9.9
+mysql-connector-python==8.2.0
