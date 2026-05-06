@@ -50,12 +50,18 @@ pipeline {
                     sh '''
                         cd "${PROJECT_PATH}"
                         
+                        # Create virtual environment if not exists
                         if [ ! -d "venv" ]; then
                             python3 -m venv venv
                         fi
                         
+                        # Activate virtual environment
                         . venv/bin/activate
+                        
+                        # Upgrade pip
                         pip install --upgrade pip
+                        
+                        # Install dependencies
                         pip install -r requirements.txt
                         
                         echo "Environment setup completed"
@@ -92,7 +98,10 @@ pipeline {
                         cd "${PROJECT_PATH}"
                         . venv/bin/activate
                         
+                        # Run pylint
                         pylint src/ --exit-zero || true
+                        
+                        # Run flake8
                         flake8 src/ tests/ --max-line-length=120 || true
                         
                         echo "Code quality checks completed"
@@ -144,6 +153,7 @@ pipeline {
                         cd "${PROJECT_PATH}"
                         . venv/bin/activate
                         
+                        # Generate HTML report
                         pytest tests/ -v \
                             --html=reports/report.html \
                             --self-contained-html \
@@ -163,6 +173,8 @@ pipeline {
                     echo "========== Archiving Test Artifacts =========="
                     sh '''
                         cd "${PROJECT_PATH}"
+                        
+                        # Create logs directory if needed
                         mkdir -p logs reports
                     '''
                     
@@ -180,6 +192,7 @@ pipeline {
                 sh '''
                     cd "${PROJECT_PATH}"
                     
+                    # Generate summary
                     echo "Test execution completed at $(date)" >> logs/pipeline_summary.log
                     echo "Database Type: ${DB_TYPE}" >> logs/pipeline_summary.log
                     echo "Test Level: ${TEST_LEVEL}" >> logs/pipeline_summary.log
@@ -191,12 +204,24 @@ pipeline {
         success {
             script {
                 echo "========== Pipeline Successful =========="
+                // Send notification on success (optional)
+                // emailext(
+                //     subject: 'Test Pipeline Successful',
+                //     body: 'All tests passed successfully',
+                //     to: 'your-email@example.com'
+                // )
             }
         }
         
         failure {
             script {
                 echo "========== Pipeline Failed =========="
+                // Send notification on failure (optional)
+                // emailext(
+                //     subject: 'Test Pipeline Failed',
+                //     body: 'Some tests failed. Check Jenkins for details',
+                //     to: 'your-email@example.com'
+                // )
             }
         }
         
