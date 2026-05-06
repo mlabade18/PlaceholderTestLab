@@ -17,6 +17,11 @@ pipeline {
             defaultValue: true,
             description: 'Generate HTML Report'
         )
+        choice(
+            name: 'PARALLEL_WORKERS',
+            choices: ['1', '2', '4', '8', 'auto'],
+            description: 'Number of Parallel Workers (auto = CPU count)'
+        )
     }
     
     environment {
@@ -25,6 +30,7 @@ pipeline {
         VENV_PATH = '${PROJECT_PATH}/venv'
         DB_TYPE = "${params.DB_TYPE}"
         LOG_LEVEL = 'INFO'
+        PARALLEL_WORKERS = "${params.PARALLEL_WORKERS}"
     }
     
     stages {
@@ -44,18 +50,12 @@ pipeline {
                     sh '''
                         cd "${PROJECT_PATH}"
                         
-                        # Create virtual environment if not exists
                         if [ ! -d "venv" ]; then
                             python3 -m venv venv
                         fi
                         
-                        # Activate virtual environment
                         . venv/bin/activate
-                        
-                        # Upgrade pip
                         pip install --upgrade pip
-                        
-                        # Install dependencies
                         pip install -r requirements.txt
                         
                         echo "Environment setup completed"
@@ -92,10 +92,7 @@ pipeline {
                         cd "${PROJECT_PATH}"
                         . venv/bin/activate
                         
-                        # Run pylint
                         pylint src/ --exit-zero || true
-                        
-                        # Run flake8
                         flake8 src/ tests/ --max-line-length=120 || true
                         
                         echo "Code quality checks completed"
@@ -104,20 +101,32 @@ pipeline {
             }
         }
         
-        stage('Run Tests') {
+        stage('Run Tests (Parallel)') {
             steps {
                 script {
-                    echo "========== Running Tests =========="
+                    echo "========== Running Tests in Parallel =========="
                     sh '''
                         cd "${PROJECT_PATH}"
                         . venv/bin/activate
                         
-                        if [ "${TEST_LEVEL}" = "smoke" ]; then
-                            pytest tests/ -m smoke -v --tb=short
-                        elif [ "${TEST_LEVEL}" = "regression" ]; then
-                            pytest tests/ -m regression -v --tb=short
+                        # Determine worker count
+                        if [ "${PARALLEL_WORKERS}" = "auto" ]; then
+                            WORKERS=$(python3 -c "import os; print(os.cpu_count())")
                         else
-                            pytest tests/ -v --tb=short
+                            WORKERS="${PARALLEL_WORKERS}"
+                        fi
+                        
+                        echo "Using ${WORKERS} parallel workers"
+                        
+                        if [ "${TEST_LEVEL}" = "smoke" ]; then
+                            pytest tests/ -m smoke -v --tb=short -n ${WORKERS} \
+                                --dist=loadscope
+                        elif [ "${TEST_LEVEL}" = "regression" ]; then
+                            pytest tests/ -m regression -v --tb=short -n ${WORKERS} \
+                                --dist=loadscope
+                        else
+                            pytest tests/ -v --tb=short -n ${WORKERS} \
+                                --dist=loadscope
                         fi
                     '''
                 }
@@ -135,7 +144,6 @@ pipeline {
                         cd "${PROJECT_PATH}"
                         . venv/bin/activate
                         
-                        # Generate HTML report
                         pytest tests/ -v \
                             --html=reports/report.html \
                             --self-contained-html \
@@ -155,8 +163,6 @@ pipeline {
                     echo "========== Archiving Test Artifacts =========="
                     sh '''
                         cd "${PROJECT_PATH}"
-                        
-                        # Create logs directory if needed
                         mkdir -p logs reports
                     '''
                     
@@ -174,10 +180,10 @@ pipeline {
                 sh '''
                     cd "${PROJECT_PATH}"
                     
-                    # Generate summary
                     echo "Test execution completed at $(date)" >> logs/pipeline_summary.log
                     echo "Database Type: ${DB_TYPE}" >> logs/pipeline_summary.log
                     echo "Test Level: ${TEST_LEVEL}" >> logs/pipeline_summary.log
+                    echo "Parallel Workers: ${PARALLEL_WORKERS}" >> logs/pipeline_summary.log
                 '''
             }
         }
@@ -185,24 +191,12 @@ pipeline {
         success {
             script {
                 echo "========== Pipeline Successful =========="
-                // Send notification on success
-                // emailext(
-                //     subject: 'Test Pipeline Successful',
-                //     body: 'All tests passed successfully',
-                //     to: 'your-email@example.com'
-                // )
             }
         }
         
         failure {
             script {
                 echo "========== Pipeline Failed =========="
-                // Send notification on failure
-                // emailext(
-                //     subject: 'Test Pipeline Failed',
-                //     body: 'Some tests failed. Check Jenkins for details',
-                //     to: 'your-email@example.com'
-                // )
             }
         }
         

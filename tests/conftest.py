@@ -1,6 +1,7 @@
 import pytest
 import sys
 import os
+import threading
 
 # Add project root to path
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -94,3 +95,91 @@ def pytest_configure(config):
     config.addinivalue_line("markers", "negative: mark test as negative test")
     config.addinivalue_line("markers", "schema: mark test as schema validation test")
     config.addinivalue_line("markers", "database: mark test as database validation test")
+
+# Thread-safe database fixture
+@pytest.fixture(scope="function")
+def db(worker_id):
+    """Provide thread-safe database instance."""
+    # Each worker gets its own database instance
+    if not hasattr(_thread_local, 'db_instance'):
+        _thread_local.db_instance = DatabaseManager()
+    
+    yield _thread_local.db_instance
+    
+    # Cleanup after test
+    _thread_local.db_instance.clear_all_tables()
+
+
+@pytest.fixture(scope="function")
+def users_api():
+    """Provide UsersAPI instance."""
+    return UsersAPI()
+
+
+@pytest.fixture(scope="function")
+def posts_api():
+    """Provide PostsAPI instance."""
+    return PostsAPI()
+
+
+@pytest.fixture(scope="function")
+def comments_api():
+    """Provide CommentsAPI instance."""
+    return CommentsAPI()
+
+
+@pytest.fixture(scope="function")
+def albums_api():
+    """Provide AlbumsAPI instance."""
+    return AlbumsAPI()
+
+
+@pytest.fixture(scope="function")
+def todos_api():
+    """Provide TodosAPI instance."""
+    return TodosAPI()
+
+
+@pytest.fixture(scope="function")
+def all_users(db, users_api):
+    """Fetch all users and store in database."""
+    response = users_api.get_all_users()
+    users = response.json()
+    db.insert_users(users)
+    return users
+
+
+@pytest.fixture(scope="function")
+def all_posts(db, posts_api):
+    """Fetch all posts and store in database."""
+    response = posts_api.get_all_posts()
+    posts = response.json()
+    db.insert_posts(posts)
+    return posts
+
+
+@pytest.fixture(scope="function")
+def all_comments(db, comments_api):
+    """Fetch all comments and store in database."""
+    response = comments_api.get_all_comments()
+    comments = response.json()
+    db.insert_comments(comments)
+    return comments
+
+
+@pytest.fixture(scope="function")
+def all_albums(db, albums_api):
+    """Fetch all albums and store in database."""
+    response = albums_api.get_all_albums()
+    albums = response.json()
+    db.insert_albums(albums)
+    return albums
+
+
+@pytest.fixture(scope="function")
+def all_todos(db, todos_api):
+    """Fetch all todos and store in database."""
+    response = todos_api.get_all_todos()
+    todos = response.json()
+    db.insert_todos(todos)
+    return todos
