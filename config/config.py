@@ -9,8 +9,25 @@ class Config:
     MAX_RETRIES = 3
     RESPONSE_TIME_THRESHOLD = 2.0  # seconds
     
-    # Database
-    DB_NAME = ":memory:"  # In-memory SQLite
+    # Database Configuration - EASILY SWITCH HERE
+    DB_TYPE = os.getenv("DB_TYPE", "sqlite")  # sqlite, postgresql, mysql
+    
+    # SQLite (default)
+    DB_NAME = ":memory:"
+    
+    # PostgreSQL Configuration
+    POSTGRES_HOST = os.getenv("POSTGRES_HOST", "localhost")
+    POSTGRES_PORT = int(os.getenv("POSTGRES_PORT", "5432"))
+    POSTGRES_USER = os.getenv("POSTGRES_USER", "postgres")
+    POSTGRES_PASSWORD = os.getenv("POSTGRES_PASSWORD", "password")
+    POSTGRES_DB = os.getenv("POSTGRES_DB", "test_db")
+    
+    # MySQL Configuration
+    MYSQL_HOST = os.getenv("MYSQL_HOST", "localhost")
+    MYSQL_PORT = int(os.getenv("MYSQL_PORT", "3306"))
+    MYSQL_USER = os.getenv("MYSQL_USER", "root")
+    MYSQL_PASSWORD = os.getenv("MYSQL_PASSWORD", "password")
+    MYSQL_DB = os.getenv("MYSQL_DB", "test_db")
     
     # Logging
     LOG_LEVEL = os.getenv("LOG_LEVEL", "INFO")
@@ -24,5 +41,4 @@ class Config:
     @classmethod
     def get_instance(cls) -> "Config":
         return cls()
-
 

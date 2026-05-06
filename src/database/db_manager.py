@@ -1,11 +1,13 @@
 import sqlite3
 from typing import List, Dict, Any, Optional, Set
 from src.utils.logger import Logger
+from config.config import Config
 
 class DatabaseManager:
-    """SQLite database manager singleton."""
+    """Database manager that supports multiple database types."""
     _instance = None
     _connection = None
+    _db_type = None
     
     def __new__(cls):
         if cls._instance is None:
@@ -14,12 +16,56 @@ class DatabaseManager:
         return cls._instance
     
     def _initialize_db(self):
-        """Initialize in-memory database with tables."""
+        """Initialize database based on DB_TYPE configuration."""
         self.logger = Logger()
+        self._db_type = Config.DB_TYPE
+        
+        if self._db_type == "postgresql":
+            self._initialize_postgresql()
+        elif self._db_type == "mysql":
+            self._initialize_mysql()
+        else:  # Default to SQLite
+            self._initialize_sqlite()
+        
+        self._create_tables()
+        self.logger.info(f"Database initialized successfully with {self._db_type}")
+    
+    def _initialize_sqlite(self):
+        """Initialize SQLite connection."""
         self._connection = sqlite3.connect(":memory:", check_same_thread=False)
         self._connection.row_factory = sqlite3.Row
-        self._create_tables()
-        self.logger.info("Database initialized successfully")
+    
+    def _initialize_postgresql(self):
+        """Initialize PostgreSQL connection."""
+        try:
+            import psycopg2
+            self._connection = psycopg2.connect(
+                host=Config.POSTGRES_HOST,
+                port=Config.POSTGRES_PORT,
+                user=Config.POSTGRES_USER,
+                password=Config.POSTGRES_PASSWORD,
+                database=Config.POSTGRES_DB
+            )
+            self.logger.info("Connected to PostgreSQL")
+        except ImportError:
+            self.logger.error("psycopg2 not installed. Install with: pip install psycopg2-binary")
+            raise
+    
+    def _initialize_mysql(self):
+        """Initialize MySQL connection."""
+        try:
+            import mysql.connector
+            self._connection = mysql.connector.connect(
+                host=Config.MYSQL_HOST,
+                port=Config.MYSQL_PORT,
+                user=Config.MYSQL_USER,
+                password=Config.MYSQL_PASSWORD,
+                database=Config.MYSQL_DB
+            )
+            self.logger.info("Connected to MySQL")
+        except ImportError:
+            self.logger.error("mysql-connector-python not installed. Install with: pip install mysql-connector-python")
+            raise
     
     def _create_tables(self):
         """Create all required tables."""
@@ -84,6 +130,7 @@ class DatabaseManager:
         """)
         
         self._connection.commit()
+        cursor.close()
     
     def insert_users(self, users: List[Dict[str, Any]]):
         """Insert users into database."""
@@ -217,3 +264,9 @@ class DatabaseManager:
             cursor.execute(f"DELETE FROM {table}")
         self._connection.commit()
         self.logger.info("All tables cleared")
+    
+    def close_connection(self):
+        """Close database connection."""
+        if self._connection:
+            self._connection.close()
+            self.logger.info("Database connection closed")
